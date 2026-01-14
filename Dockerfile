@@ -3,13 +3,13 @@ RUN apt-get update && apt-get install -y && \
     apt-get autoremove && \
     apt-get -y clean && \
     rm -rf /var/lib/apt/lists/*
-COPY . /usr/local/src/skyline-gbc
-WORKDIR /usr/local/src/skyline-gbc
+COPY . /usr/local/src/duckdemo-gbc
+WORKDIR /usr/local/src/duckdemo-gbc
 RUN make build && \
     make test && \
     make package
 
 FROM scratch AS build-export
-COPY --from=build /usr/local/src/skyline-gbc/build/skyline-gbc.gb /
+COPY --from=build /usr/local/src/duckdemo-gbc/build/duckdemo.gb /
 WORKDIR /
 
