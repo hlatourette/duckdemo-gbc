@@ -1,5 +1,5 @@
-# skyline-gbc
-GBC Vehicle Dashboard
+# duckdemo-gbc
+GBC Demoscene
 
 ## Build
 ```
@@ -8,6 +8,6 @@ docker build --target=build-export --output type=local,dest=./output .
 
 ## Run
 ```
-<gameboy/emulator> skyline-gbc.gb
+<gameboy/emulator> duckdemo.gb
 ```
 
