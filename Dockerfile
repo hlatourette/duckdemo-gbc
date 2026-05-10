@@ -1,4 +1,4 @@
-FROM ghcr.io/gbdev/rgbds:latest AS build
+FROM ghcr.io/gbdev/rgbds:master AS build
 RUN apt-get update && apt-get install -y && \
     apt-get autoremove && \
     apt-get -y clean && \
