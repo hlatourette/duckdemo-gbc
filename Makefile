@@ -8,7 +8,7 @@ SRC_DIR   := src
 all: clean build test
 
 build:
-	mkdir -p ${BUILD_DIR} && cd build && rgbasm $(addprefix -I,../${ASSET_DIR} ../${INC_DIR} ../${SRC_DIR}) -o hello-world.o ../${SRC_DIR}/hello-world.asm && rgblink -o duckdemo.gb hello-world.o && rgbfix -v -p 0xFF duckdemo.gb
+	mkdir -p ${BUILD_DIR} && cd build && rgbasm $(addprefix -I,../${ASSET_DIR} ../${INC_DIR} ../${SRC_DIR}) -o duckdemo.o ../${SRC_DIR}/duckdemo.asm && rgblink -o duckdemo.gb duckdemo.o && rgbfix -v -p 0xFF duckdemo.gb
 
 clean:
 	rm -rf ${BUILD_DIR}
